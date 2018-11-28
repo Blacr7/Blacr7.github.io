@@ -1,0 +1,192 @@
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+}
+
+.landingPage{
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    
+    header {
+        width: 100%;
+        height: 76px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
+    }
+
+    #menu-icon {
+        display: none;
+        width: 40px;
+        height: 40px;
+        background: url("Assets/Hamburger.png") center;
+        background-size: contain;
+        background-repeat: no-repeat;
+
+    }
+
+    a:hover#menu-icon {
+        border-radius: 4px 4px 0 0;
+    }
+
+    .navBar{
+        z-index: 2;
+        position: absolute;
+        margin-top: 1em;
+
+        ul{
+            list-style: none;
+        }
+
+        li{
+            display: block;
+            float: left;
+            padding: 10px;
+        }
+
+        a{
+            text-decoration: none;
+            color:#fff;
+        }
+    
+    }
+
+    h2{
+        color: #fff;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        position: absolute;
+        font-weight: bolder;
+        font-size: 4rem;
+        font-style: italic;
+        z-index: 2;
+        top: 50%;
+        left: 50%;
+        min-width: 626px;
+        transform: translate(-50%, -50%);
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    }
+
+    .landingImage{
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url("Assets/LandingPage.jpg");
+        min-height: 100vh;
+        width: 100vw;
+        filter: contrast(60%);
+    }
+}
+
+.description{
+    height: 100vh;
+    line-height: 2;
+    width: 100%;
+    position: relative;
+
+    .descriptionContent{
+        max-width: 1026px;
+        width: 80%;
+        font-size: 2.7rem;
+        color: #999;
+        margin: auto;
+
+        h2{
+            margin: 2rem 0 2rem 0;
+        }
+        
+        .descriptionBlock{
+            box-sizing: border-box;
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            color: #474544;
+            line-height: 2;
+            overflow: hidden;
+        }
+    }
+}
+
+@media only screen and (min-width: 2560px){
+    .landingPage{
+        h2{
+            font-size: 6rem;
+        }
+    }
+    .description{
+        .descriptionContent{
+            font-size: 4rem;
+
+            .descriptionBlock{
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1260px){
+    .landingPage{
+        .navBar{
+            a{
+                color: #1d1c1c; 
+            }
+        }
+
+        h2{
+            color: #1d1c1c;
+            font-weight: 200;
+            font-stretch: expanded;
+        }
+
+        .landingImage{
+            background: fixed no-repeat url("Assets/LargerLandingPage.jpg") top right;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+    }
+}
+
+@media only screen and (max-width: 650px){
+
+    .landingPage{
+        #menu-icon {
+            display:block;
+        }
+
+        nav ul, nav:active ul{ 
+            display: none;
+            position: absolute;
+            left: 2px;
+            width: 100px;
+            border-radius: 4px 0 4px 4px;
+        }
+
+        nav li {
+            text-align: center;
+            width: 100%;
+            padding: 10px 0;
+            margin: 0;
+        }
+
+        nav:hover ul {
+            display: block;
+        }
+
+        h2{
+            min-width: 0;
+        }
+
+        .landingImage{
+            background-image: url("Assets/LongerLandingPage.jpg");
+        }
+    }
+}
