@@ -14,26 +14,11 @@ body {
   overflow: hidden;
 }
 
-.landingPage header {
-  width: 100%;
-  height: 76px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 100;
-}
-
 .landingPage #menu-icon {
   display: none;
-  width: 40px;
-  height: 40px;
   background: url("Assets/Hamburger.png") center;
   background-size: contain;
   background-repeat: no-repeat;
-}
-
-.landingPage a:hover#menu-icon {
-  border-radius: 4px 4px 0 0;
 }
 
 .landingPage .navBar {
@@ -49,7 +34,7 @@ body {
 .landingPage .navBar li {
   display: block;
   float: left;
-  padding: 10px;
+  padding: 1em;
 }
 
 .landingPage .navBar a {
@@ -86,6 +71,22 @@ body {
           filter: contrast(60%);
 }
 
+article {
+  margin: 2rem;
+}
+
+article .contactInfo {
+  display: inline-block;
+  list-style: none;
+  line-height: 2em;
+}
+
+article .portfolioPic {
+  height: 200px;
+  width: 200px;
+  float: right;
+}
+
 .description {
   height: 100vh;
   line-height: 2;
@@ -115,12 +116,48 @@ body {
   overflow: hidden;
 }
 
+.contactBackground {
+  display: none;
+}
+
 @media only screen and (min-width: 2560px) {
   .landingPage h2 {
     font-size: 6rem;
   }
+  .landingPage li {
+    font-size: 2rem;
+  }
+  article .contactInfo {
+    font-size: 2rem;
+  }
+  article .portfolioPic {
+    height: 380px;
+    width: 380px;
+  }
   .description .descriptionContent {
     font-size: 4rem;
+  }
+  .description .descriptionContent .descriptionBlock {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (min-width: 1900px) {
+  .landingPage h2 {
+    font-size: 5rem;
+  }
+  .landingPage li {
+    font-size: 1.4rem;
+  }
+  article .contactInfo {
+    font-size: 1.3rem;
+  }
+  article .portfolioPic {
+    height: 280px;
+    width: 280px;
+  }
+  .description .descriptionContent {
+    font-size: 3.7rem;
   }
   .description .descriptionContent .descriptionBlock {
     font-size: 2rem;
@@ -145,28 +182,45 @@ body {
 @media only screen and (max-width: 650px) {
   .landingPage #menu-icon {
     display: block;
+    width: 40px;
+    height: 40px;
+    padding-left: 1em;
   }
   .landingPage nav ul, .landingPage nav:active ul {
+    position: relative;
     display: none;
-    position: absolute;
-    left: 2px;
-    width: 100px;
-    border-radius: 4px 0 4px 4px;
+    width: 1rem;
   }
   .landingPage nav li {
     text-align: center;
-    width: 100%;
-    padding: 10px 0;
+    width: 6rem;
     margin: 0;
+  }
+  .landingPage nav li a {
+    float: left;
   }
   .landingPage nav:hover ul {
     display: block;
   }
   .landingPage h2 {
     min-width: 0;
+    font-size: 3.8rem;
   }
   .landingPage .landingImage {
     background-image: url("Assets/LongerLandingPage.jpg");
+  }
+  article {
+    margin: 0;
+  }
+  article .contactInfo {
+    width: 80%;
+    min-width: 275px;
+    margin: auto;
+    font-size: 1.4rem;
+    display: block;
+  }
+  article .portfolioPic {
+    display: none;
   }
 }
 /*# sourceMappingURL=styles.css.map */
