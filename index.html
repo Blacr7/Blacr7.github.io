@@ -19,7 +19,7 @@
 
                     <ul>
                         <li><a href="#goToAbout">About Me</a></li>
-                        <li><a href="">Contact Me</a></li>
+                        <li><a href="#goToContact">Contact Me</a></li>
                         <li><a href="">Find A Home</a></li>
                     </ul>
                 </nav>
@@ -28,86 +28,72 @@
             <h2>Janique Mynot</h2>
             <div class="landingImage"></div>
         </section>
-
-        <article >
-            <ul class="contactInfo">
-                <li><a href="mailto:Jmynot@gmail.com">Jmynot@gmail.com</a> </li>
-                <li>Cell: (954) 801-2120</li>
-                <li>Home Value Realty, LLC</li>
-                <li>2501 Palm Ave</li>
-                <li>Miramar, FL 33025</li>
-                <li>Office Fax: (954) 589-0667</li>
-            </ul>
-
-            <img class="portfolioPic" src="Assets/portfolioPic.jpg" alt="A picture of Janique Mynot">
-        </article>
-
         
+
         <section class="description" id="goToAbout">
+
+            <div class="contactInfoHolder"> 
+                <ul class="contactInfo">
+                    <li><a href="mailto:Jmynot@gmail.com">Jmynot@gmail.com</a> </li>
+                    <li>Cell: (954) 801-2120</li>
+                    <li>Home Value Realty, LLC</li>
+                    <li>2501 Palm Ave</li>
+                    <li>Miramar, FL 33025</li>
+                    <li>Office Fax: (954) 589-0667</li>
+                </ul>
+
+                <img class="portfolioPic" src="Assets/portfolioPic.jpg" alt="A picture of Janique Mynot">
+
+            </div>
+
             <div class="descriptionContent">
                 <h2>About Janique.</h2>
+                
                 <div class="descriptionBlock">
                     <span>
-                            Janique is a Graduate from Nova Southeastern University
-                            where she received a Bachelor’s degree in Nursing. 
+                        Janique Is a Graduate from Nova Southeastern University, where she received a Bachelor’s degree in Nursing. Being devoted and providing satisfactory customer service for others has been a life long passion of hers. She prides herself in being professional, hardworking, caring and very trust worthy. 
                     </span>
                 </div>
 
                 <div class="descriptionBlock">
                     <span>
-                            Being devoted and providing satisfactory customer service for others has been a life long passion of hers.
+                        Janique is a member of The Greater Fort Lauderdale board of realtors as well as The National Association  of Realtors, which is both composed of an elite network of real estate professionals that prides themselves in ensuring that the buying and selling process is handled efficiently.  She is now providing services to residents of Broward, Palm beach and St. Lucie counties.
                     </span>
                 </div>
 
                 <div class="descriptionBlock">
                     <span>
-                            She prides herself in being professional, hardworking, caring and trustworthy. 
-                    </span>
-                </div>
-
-                <div class="descriptionBlock">
-                    <span>
-                            Janique is a member of The Greater Fort Lauderdale board of realtors as well as The National Association  of Realtors, which is both composed of an elite network of real estate professionals 
-                    </span>
-                </div>
-
-                <div class="descriptionBlock">
-                    <span>
-                            that prides themselves in ensuring that the buying and selling process is handled efficiently.
-                    </span>
-                </div>
-
-                <div class="descriptionBlock">
-                    <span>
-                            She is now providing services to residents of Broward, Palm beach and St. Lucie counties. 
+                        She is proudly associated with Home Values Realtly, LLC, where there is a team of professionals that is committed to your real estate needs, by ensuring that the buying and selling process is a satisfying and memorable one. 
                     </span>
                 </div>
             </div>
+
         </section>
 
         <section id="goToContact" class="contactBackground">
             <div class="contact">
                 <form class="contactForm" method="post" action="https://formspree.io/Jmynot@gmail.com">
                     
-                    <label for="firstName">First Name</label>
+                    <label for="firstName" id="fname"><span class="replace">First Name</span></label>
                     <input type="text" id="firstName" name="firstName" required>
 
-                    <label for="lastName">Last Name</label>
+                    <label for="lastName" id="lname"><span class="replace">Last Name</span></label>
                     <input type="text" id="lastName" name="lastName" required>
 
-                    <label for="email">Email</label>
+                    <label for="email" >Email</label>
                     <input type="email" id="email" name="email" required>
 
-                    <label for="number">Phone Number</label>
-                    <input type="number" id="number" name="number">
+                    <label for="number">Number</label>
+                    <input type="text" id="number" name="Phone Number" placeholder="Please enter your Phone Number">
 
                     <label for="Message">Message</label>
-                    <textarea name="Message" id="Message" rows="8" required></textarea>
+                    <textarea name="Message" id="message"></textarea>
                         
-                    <input type="submit" name="submit">
+                    <input type="submit" id="submit" name="submit">
                 </form>
             </div>
         </section>
+
     </div>
 </body>
 </html>

@@ -1,3 +1,5 @@
+$viewPort: 100vh, 100%;
+
 *{
     margin: 0;
     padding: 0;
@@ -18,7 +20,6 @@ body{
         background: url("Assets/Hamburger.png") center;
         background-size: contain;
         background-repeat: no-repeat;
-
     }
 
     .navBar{
@@ -71,32 +72,39 @@ body{
     }
 }
 
-article{
-    margin: 2rem;
-
-    .contactInfo{
-        display: inline-block;
-        list-style: none;
-        line-height: 2em;
-    }
-
-    .portfolioPic{
-        height: 200px;
-        width: 200px;
-        float: right;
-    }
-}
-
 .description{
-    height: 100vh;
-    line-height: 2;
     width: 100%;
     position: relative;
+    /*background: no-repeat url(
+        'data:image/svg+xml;utf8,
+        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="70%">
+                <title>Layer 1</title>
+                <rect transform="rotate(56.63214874267578 485.65185546875006 368.3287658691406)" height="100%" width="30%" y="-100%" x="70%" style="fill:#1A333F;"/>
+            </svg>   
+        '
+    ); */
+
+    .contactInfoHolder{
+        padding: 2rem;
+        margin: auto;
+        width: 80%;
+
+        .contactInfo{
+            display: inline-block;
+            list-style: none;
+            line-height: 2em;
+        }
+
+        .portfolioPic{
+            height: 200px;
+            width: 200px;
+            float: right;
+        }
+    }
 
     .descriptionContent{
-        max-width: 1026px;
         width: 80%;
-        font-size: 2.7rem;
+        font-size: 2.2rem;
         color: #999;
         margin: auto;
 
@@ -106,81 +114,41 @@ article{
         
         .descriptionBlock{
             box-sizing: border-box;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
+            line-height: 1.9rem;
             margin-bottom: 2rem;
             color: #474544;
-            line-height: 2;
             overflow: hidden;
         }
     }
 }
 
 .contactBackground{
-    display: none;
-}
+    max-height: 100vh;
+    width: 100%;
+    margin: auto;
+    position: relative;
+    padding: 0 0 2rem;
 
-@media only screen and (min-width: 2560px){
-    .landingPage{
-        h2{
-            font-size: 6rem;
+    .contactForm{
+        display: grid;
+        width: 80%;
+        margin: auto;
+        grid-template-columns: 25% auto auto ;
+        grid-template-rows:  1.5em 1.5em 1.5em 1.5em 12em 1.5em;
+        grid-gap: 0.3em 0.6em;
+
+        label{
+            width: auto;
+            padding: 0;
+            margin: 0;
+            grid-column: 1;
         }
 
-        li{
-            font-size: 2rem;
-        }
-    }
-
-    article{
-        .contactInfo{
-            font-size: 2rem;
-        }
-
-        .portfolioPic{
-            height: 380px;
-            width: 380px;
-        }
-    }
-
-    .description{
-        .descriptionContent{
-            font-size: 4rem;
-
-            .descriptionBlock{
-                font-size: 2rem;
-            }
-        }
-    }
-}
-
-@media only screen and (min-width: 1900px){
-    .landingPage{
-        h2{
-            font-size: 5rem;
-        }
-
-        li{
-            font-size: 1.4rem;
-        }
-    }
-
-    article{
-        .contactInfo{
-            font-size: 1.3rem;
-        }
-
-        .portfolioPic{
-            height: 280px;
-            width: 280px;
-        }
-    }
-
-    .description{
-        .descriptionContent{
-            font-size: 3.7rem;
-
-            .descriptionBlock{
-                font-size: 2rem;
-            }
+        #firstName, #lastName, #email, #number,#submit, #message{
+            grid-column: 2/4;
+            width: auto;
+            margin: 0;
         }
     }
 }
@@ -207,6 +175,100 @@ article{
             background-size: cover;
         }
     }
+
+    .description{
+        .contactInfoHolder{
+            .contactInfo{
+                font-size: 1.2em;
+            }
+
+            .portfolioPic{
+                height: 280px;
+                width: 280px;
+            }
+        }
+
+        .descriptionContent{
+            font-size: 2.5em;
+
+            .descriptionBlock{
+                font-size: 1.3rem;
+                line-height: 1.4em;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1900px){
+    .landingPage{
+        h2{
+            font-size: 5rem;
+        }
+
+        li{
+            font-size: 1.4rem;
+        }
+    }
+
+    .description{
+        .descriptionContent{
+            font-size: 3rem;
+            margin-top: 5%;
+            .descriptionBlock{
+                font-size: 1.5rem;
+                line-height: 2em;
+                width: auto;
+            }
+        }
+    }
+
+    .contactBackground{
+        .contactForm{
+            font-size: 1.5rem;
+            margin-top: 5%;
+        }
+    }    
+}
+
+@media only screen and (min-width: 2560px){
+    .landingPage{
+        h2{
+            font-size: 6rem;
+        }
+
+        li{
+            font-size: 2rem;
+        }
+    }
+    
+    .description{
+        .contactInfoHolder{
+            .contactInfo{
+                font-size: 2rem;
+            }
+    
+            .portfolioPic{
+                height: 380px;
+                width: 380px;
+            }
+        }
+
+        .descriptionContent{
+            font-size: 4rem;
+
+            .descriptionBlock{
+                font-size: 2rem;
+            }
+        }
+    }
+
+    .contactBackground{
+        .contactForm{
+            margin-top: 10%;
+            font-size: 2rem;
+        }
+    }
+    
 }
 
 @media only screen and (max-width: 650px){
@@ -233,6 +295,7 @@ article{
 
                 a{
                     float: left;
+                    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
                 }
             }
             
@@ -251,19 +314,62 @@ article{
         }
     }
 
-    article{
-        margin: 0;
-
-        .contactInfo{
-            width: 80%;
-            min-width: 275px;
+    .description{
+        .contactInfoHolder{
             margin: auto;
-            font-size: 1.4rem;
-            display: block;
+            width: 80%;
+
+            .contactInfo{
+                min-width: 275px;
+                margin: auto;
+                margin-top: 2rem;
+                font-size: 1rem;
+                display: block;
+            }
+
+            .portfolioPic{
+                display: none;
+            }
         }
 
-        .portfolioPic{
-            display: none;
+        h2{
+           font-size: 2.5rem; 
         }
+
+        .descriptionContent{
+            .descriptionBlock{
+                font-size: 1.3rem;
+                line-height: 1.9rem;
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width: 420px){
+    @mixin replace($content){
+        .replace {
+            visibility: hidden;
+            position: relative;
+        }
+        
+        .replace:after {
+            visibility: visible;
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: "#{$content}";
+        }
+    }
+    
+    .contactForm{
+        #fname{
+            @include replace(First);
+        }
+
+        #lname{
+            @include replace(Last);
+        }
+        
     }
 }
