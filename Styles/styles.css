@@ -14,13 +14,14 @@ body {
 
 .landingPage {
   height: 100vh;
+  width: 100%;
   position: relative;
   overflow: hidden;
 }
 
 .landingPage #menu-icon {
   display: none;
-  background: url("Assets/Hamburger.png") center;
+  background: url("../Assets/Hamburger.png") center;
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -68,7 +69,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url("Assets/LandingPage.jpg");
+  background-image: url("../Assets/LandingPage.jpg");
   min-height: 100vh;
   width: 100vw;
   -webkit-filter: contrast(60%);
@@ -100,12 +101,12 @@ body {
 
 .description .descriptionContent {
   width: 80%;
-  font-size: 2.2rem;
   color: #999;
   margin: auto;
 }
 
 .description .descriptionContent h2 {
+  font-size: 2rem;
   margin: 2rem 0 2rem 0;
 }
 
@@ -132,18 +133,19 @@ body {
   display: grid;
   width: 80%;
   margin: auto;
-  -ms-grid-columns: 25% auto auto;
-      grid-template-columns: 25% auto auto;
-  -ms-grid-rows: 1.5em 1.5em 1.5em 1.5em 12em 1.5em;
-      grid-template-rows: 1.5em 1.5em 1.5em 1.5em 12em 1.5em;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
+  -ms-grid-rows: 3em 1.5em 1.5em 1.5em 1.5em 12em 1.5em;
+      grid-template-rows: 3em 1.5em 1.5em 1.5em 1.5em 12em 1.5em;
   grid-gap: 0.3em 0.6em;
 }
 
 .contactBackground .contactForm h2 {
   -ms-grid-column: 1;
-  -ms-grid-column-span: 4;
-  grid-column: 1/5;
-  font-size: 2.5em;
+  -ms-grid-column-span: 3;
+  grid-column: 1/4;
+  width: auto;
+  font-size: 2em;
   color: #999;
 }
 
@@ -173,7 +175,7 @@ body {
     font-stretch: expanded;
   }
   .landingPage .landingImage {
-    background: fixed no-repeat url("Assets/LargerLandingPage.jpg") top right;
+    background: fixed no-repeat url("../Assets/LargerLandingPage.jpg") top right;
     background-size: cover;
   }
   .description .contactInfoHolder .contactInfo {
@@ -259,7 +261,6 @@ body {
   }
   .landingPage nav li a {
     float: left;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   }
   .landingPage nav:hover ul {
     display: block;
@@ -269,7 +270,7 @@ body {
     font-size: 3.8rem;
   }
   .landingPage .landingImage {
-    background-image: url("Assets/LongerLandingPage.jpg");
+    background-image: url("../Assets/LongerLandingPage.jpg");
   }
   .description .contactInfoHolder {
     margin: auto;
@@ -293,42 +294,120 @@ body {
     line-height: 1.9rem;
   }
   .contactBackground .contactForm h2 {
-    font-size: 2.5rem;
+    font-size: 2em;
   }
   .contactBackground .contactForm h2 .replace {
-    visibility: hidden;
     position: relative;
+    visibility: hidden;
   }
-  .contactBackground .contactForm h2 .replace:after {
+  .contactBackground .contactForm h2 .replace:before {
     visibility: visible;
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative;
     content: "Sign up with Janique";
   }
 }
 
-@media only screen and (max-width: 420px) {
-  .contactForm #fname .replace {
-    visibility: hidden;
+@media only screen and (max-width: 430px) {
+  .contactBackground .contactForm h2 .replace {
     position: relative;
+    visibility: hidden;
   }
-  .contactForm #fname .replace:after {
+  .contactBackground .contactForm h2 .replace:before {
     visibility: visible;
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative;
+    content: "Sign up here";
+  }
+  .contactBackground .contactForm #fname .replace {
+    position: relative;
+    visibility: hidden;
+  }
+  .contactBackground .contactForm #fname .replace:before {
+    visibility: visible;
+    position: relative;
     content: "First";
   }
-  .contactForm #lname .replace {
+  .contactBackground .contactForm #lname .replace {
+    position: relative;
     visibility: hidden;
+  }
+  .contactBackground .contactForm #lname .replace:before {
+    visibility: visible;
+    position: relative;
+    content: "Last";
+  }
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  /* IE10+ CSS styles go here */
+  .landingPage .landingImage {
+    background-attachment: local;
+  }
+  .landingPage nav li a {
+    text-shadow: 1px 0 black, 0 .6px black, .6px 0 black, 0 -.6px black;
+  }
+  .contactBackground {
+    max-height: 100vh;
+    width: 100%;
+    margin: auto;
+    position: relative;
+    padding: 0 0 2rem;
+  }
+  .contactBackground .contactForm {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    width: 80%;
+    margin: auto;
+  }
+  .contactBackground .contactForm h2 {
+    width: auto;
+    font-size: 2em;
+    color: #999;
+  }
+  .contactBackground .contactForm label {
+    width: auto;
+    padding: 1em 0 1em 0;
+    margin: 0;
+  }
+  .contactBackground .contactForm #firstName, .contactBackground .contactForm #lastName, .contactBackground .contactForm #email, .contactBackground .contactForm #number, .contactBackground .contactForm #submit, .contactBackground .contactForm #message {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    width: auto;
+    margin: 0;
+    padding: 1em;
+  }
+  .contactBackground .contactForm #message {
+    height: 10em;
+  }
+}
+
+@media only screen and (-ms-high-contrast: active) and (max-width: 430px) {
+  .contactBackground .contactForm h2 .replace {
     position: relative;
   }
-  .contactForm #lname .replace:after {
-    visibility: visible;
+  .contactBackground .contactForm h2 .replace::after {
     position: absolute;
-    top: 0;
-    left: 0;
+    content: "Sign up here";
+  }
+  .contactBackground .contactForm #fname .replace {
+    position: relative;
+  }
+  .contactBackground .contactForm #fname .replace::after {
+    position: absolute;
+    content: "First";
+  }
+  .contactBackground .contactForm #lname .replace {
+    position: relative;
+  }
+  .contactBackground .contactForm #lname .replace::after {
+    position: absolute;
     content: "Last";
   }
 }
