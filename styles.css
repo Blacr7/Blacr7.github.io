@@ -134,8 +134,8 @@ body {
   margin: auto;
   -ms-grid-columns: 25% auto auto;
       grid-template-columns: 25% auto auto;
-  -ms-grid-rows: 4.5em 1.5em 1.5em 1.5em 1.5em 12em 1.5em;
-      grid-template-rows: 4.5em 1.5em 1.5em 1.5em 1.5em 12em 1.5em;
+  -ms-grid-rows: 1.5em 1.5em 1.5em 1.5em 12em 1.5em;
+      grid-template-rows: 1.5em 1.5em 1.5em 1.5em 12em 1.5em;
   grid-gap: 0.3em 0.6em;
 }
 
