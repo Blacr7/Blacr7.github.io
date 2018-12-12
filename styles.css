@@ -270,10 +270,6 @@ body {
   }
   .landingPage .landingImage {
     background-image: url("Assets/LongerLandingPage.jpg");
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
   }
   .description .contactInfoHolder {
     margin: auto;
@@ -290,15 +286,14 @@ body {
     display: none;
   }
   .description h2 {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
   }
   .description .descriptionContent .descriptionBlock {
     font-size: 1.3rem;
     line-height: 1.9rem;
   }
   .contactBackground .contactForm h2 {
-    font-size: 2.2rem;
-    min-width: 486px;
+    font-size: 2.5rem;
   }
   .contactBackground .contactForm h2 .replace {
     visibility: hidden;

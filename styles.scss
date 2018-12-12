@@ -1,21 +1,19 @@
 $MainColor: #fff;
 
 @mixin replace($content){
-    .replace {
-        visibility: hidden;
-        position: relative;
+        .replace {
+            visibility: hidden;
+            position: relative;
+        }
+        
+        .replace:after {
+            visibility: visible;
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: "#{$content}";
+        }
     }
-    
-    .replace:after {
-        visibility: visible;
-        position: absolute;
-        top: 0;
-        left: 0;
-        content: "#{$content}";
-    }
-}
-
-// --------------------------------------------------------------------------------------------------------------------------
 *{
     margin: 0;
     padding: 0;
@@ -329,10 +327,6 @@ body{
 
         .landingImage{
             background-image: url("Assets/LongerLandingPage.jpg");
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
         }
     }
 
@@ -355,7 +349,7 @@ body{
         }
 
         h2{
-           font-size: 2.2rem; 
+           font-size: 2.5rem; 
         }
 
         .descriptionContent{
@@ -369,12 +363,13 @@ body{
     .contactBackground{
         .contactForm{
             h2{
-                font-size: 2.2rem; 
-                @include replace(Sign up with Janique);
-                min-width: 486px;
+                font-size: 2.5rem; 
+                @include replace("Sign up with Janique");
             }
         }
     }
+
+
 }
 
 @media only screen and (max-width: 420px){
