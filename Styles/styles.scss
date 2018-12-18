@@ -12,6 +12,7 @@ $MainColor: #fff;
             content: "#{$content}";
         }
     }
+
 *{
     margin: 0;
     padding: 0;
@@ -20,10 +21,12 @@ $MainColor: #fff;
 
 body{
     font-family: 'Lato', sans-serif;
+
 }
 
-.pageContainer{
-    background: $MainColor;
+h2{
+    font-size: 2rem;
+    color: #999;
 }
 
 .landingPage{
@@ -82,7 +85,7 @@ body{
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        background-image: url("../Assets/LandingPage.jpg");
+        background-image: url("../Assets/LandingPage-min.jpg");
         min-height: 100vh;
         width: 100vw;
         filter: contrast(60%);
@@ -96,7 +99,9 @@ body{
     .contactInfoHolder{
         padding: 2rem;
         margin: auto;
-        width: 80%;
+        width: 60%;
+        height: 30%;
+        overflow: hidden;
 
         .contactInfo{
             display: inline-block;
@@ -112,15 +117,10 @@ body{
     }
 
     .descriptionContent{
-        width: 80%;
+        width: 60%;
         color: #999;
         margin: auto;
 
-        h2{
-            font-size: 2rem;
-            margin: 2rem 0 2rem 0;
-        }
-        
         .descriptionBlock{
             box-sizing: border-box;
             font-size: 1.3rem;
@@ -141,7 +141,7 @@ body{
 
     .contactForm{
         display: grid;
-        width: 80%;
+        width: 60%;
         margin: auto;
         grid-template-columns: auto auto auto ;
         grid-template-rows:  3em 1.5em 1.5em 1.5em 1.5em 12em 1.5em;
@@ -150,8 +150,6 @@ body{
         h2{
             grid-column: 1/4;
             width: auto;
-            font-size: 2em;
-            color: #999;
         }
 
         label{
@@ -169,6 +167,14 @@ body{
     }
 }
 
+.divider{
+    background:no-repeat url("https://images.unsplash.com/photo-1506377295352-e3154d43ea9e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80") bottom left;
+    background-size: contain;
+    display: none;
+    height: 70vh;
+    width: 50vw;
+}
+
 @media only screen and (min-width: 1260px){
     .landingPage{
         .navBar{
@@ -184,7 +190,7 @@ body{
         }
 
         .landingImage{
-            background: fixed no-repeat url("../Assets/LargerLandingPage.jpg") top right;
+            background: fixed no-repeat url("../Assets/LargerLandingPage-min.jpg") top right;
             -webkit-background-size: cover;
             -moz-background-size: cover;
             -o-background-size: cover;
@@ -325,7 +331,7 @@ body{
         }
 
         .landingImage{
-            background-image: url("../Assets/LongerLandingPage.jpg");
+            background-image: url("../Assets/LongerLandingPage-min.jpg");
         }
     }
 
@@ -352,6 +358,7 @@ body{
         }
 
         .descriptionContent{
+            width: 80%;
             .descriptionBlock{
                 font-size: 1.3rem;
                 line-height: 1.9rem;
@@ -361,6 +368,7 @@ body{
 
     .contactBackground{
         .contactForm{
+            width: 80%;
             h2{
                 font-size: 2em; 
                 @include replace("Sign up with Janique");
@@ -462,15 +470,15 @@ body{
         .contactBackground{
             .contactForm{
                 h2{
-                  @include replaceIE("Sign up here")  
+                  @include replace("Sign up here")  
                 }
     
                 #fname{
-                    @include replaceIE(First);
+                    @include replace("First");
                 }
     
                 #lname{
-                    @include replace;
+                    @include replace("Last");
                 }
                 
             }
