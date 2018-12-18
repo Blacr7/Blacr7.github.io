@@ -1,17 +1,19 @@
 $MainColor: #fff;
 
 @mixin replace($content){
-        .replace {
-            position: relative;
-            visibility: hidden;
-        }
-        
-        .replace::before {
-            visibility: visible;
-            position: relative;
-            content: "#{$content}";
-        }
+    .replace {
+        position: relative;
+        visibility: hidden;
     }
+        
+    .replace::before {
+        visibility: visible;
+        position: relative;
+        content: "#{$content}";
+    }
+}
+
+//-----------------------------------------------------------------
 
 *{
     margin: 0;
@@ -167,12 +169,32 @@ h2{
     }
 }
 
-.divider{
-    background:no-repeat url("https://images.unsplash.com/photo-1506377295352-e3154d43ea9e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80") bottom left;
-    background-size: contain;
-    display: none;
-    height: 70vh;
-    width: 50vw;
+footer{
+    margin-top: 5%;
+    height: 30vh;
+    min-height: 300px;
+    background-color: #333;
+    color: #fff;
+    overflow: hidden;
+    position: relative;
+
+    .contactInfoHolder{
+        padding: 2rem;
+        margin: auto;
+        width: 60%;
+        display: table;
+    
+        .contactInfo{
+            display: table-cell;
+            vertical-align: middle;
+            list-style: none;
+            line-height: 2em;
+
+            a{
+                color: #fff;
+            }
+        }
+    }
 }
 
 @media only screen and (min-width: 1260px){
@@ -291,6 +313,13 @@ h2{
         }
     }
     
+    footer{
+        .contactInfoHolder{
+            .contactInfo{
+                font-size: 1.5rem;
+            }
+        }
+    }
 }
 
 @media only screen and (max-width: 650px){
@@ -376,7 +405,25 @@ h2{
         }
     }
 
+    footer{
+        height: 40vh;
+        .contactInfoHolder{
+            padding: 2rem 0;
+            margin: auto;
+            width: 80%;
 
+            .contactInfo{
+                margin: auto;
+                font-size: 1rem;
+                display: block;
+                padding: 0 0;
+                
+                a{
+                    color: #fff;
+                }
+            }
+        }
+    }
 }
 
 @media only screen and (max-width: 430px){
@@ -437,7 +484,7 @@ h2{
             display: flex;
             flex-direction: column;
             flex-wrap: nowrap;
-            width: 80%;
+            width: 60%;
             margin: auto;
     
             h2{
@@ -466,7 +513,33 @@ h2{
         }
     }
 
-    @media only screen and (max-width: 430px){
+    footer{
+        height: 30vh;
+        background-color: #333;
+        color: #fff;
+        overflow: hidden;
+        position: relative;
+    
+        .contactInfoHolder{
+            padding: 2rem;
+            margin: auto;
+            width: 60%;
+            display: table;
+        
+            .contactInfo{
+                display: table-cell;
+                vertical-align: middle;
+                list-style: none;
+                line-height: 2em;
+    
+                a{
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 650px){
         .contactBackground{
             .contactForm{
                 h2{
@@ -483,6 +556,11 @@ h2{
                 
             }
         }
-        
+
+        footer{
+            .contactInfoHolder{
+                width: 80%;
+            }
+        }
     }
 }
