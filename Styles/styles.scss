@@ -23,7 +23,7 @@ $MainColor: #fff;
 
 body{
     font-family: 'Lato', sans-serif;
-
+    
 }
 
 h2{
@@ -122,7 +122,7 @@ h2{
         width: 60%;
         color: #999;
         margin: auto;
-
+        
         .descriptionBlock{
             box-sizing: border-box;
             font-size: 1.3rem;
@@ -212,7 +212,7 @@ footer{
         }
 
         .landingImage{
-            background: fixed no-repeat url("../Assets/LargerLandingPage-min.jpg") top right;
+            background: fixed no-repeat url("../Assets/LargerLandingPageSmaller-min.jpg") top right;
             -webkit-background-size: cover;
             -moz-background-size: cover;
             -o-background-size: cover;
