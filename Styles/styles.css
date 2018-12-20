@@ -199,7 +199,7 @@ footer .contactInfoHolder .contactInfo a {
     font-stretch: expanded;
   }
   .landingPage .landingImage {
-    background: fixed no-repeat url("../Assets/LargerLandingPageSmaller-min.jpg") top right;
+    background: fixed no-repeat url("../Assets/LargerLandingPageScaled-min.jpg") top right;
     background-size: cover;
   }
   .description .contactInfoHolder .contactInfo {
