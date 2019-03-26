@@ -1,5 +1,6 @@
-# JaniqueMynotRealty
-Real Estate Portfolio for Janique Mynot
+# Janique Mynot Realty
+Real Estate Portfolio for Janique Mynot.
 
+Responsive, Cross browder friendly design using SASS, SEO,and custom domains.
 
-Responsive design using SASS.
+hosted on github pages
