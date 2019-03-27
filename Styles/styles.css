@@ -1,16 +1,17 @@
+@import url("https://fonts.googleapis.com/css?family=Lato");
 * {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
   font-family: 'Lato', sans-serif;
-}
-
-h2 {
-  font-size: 2rem;
-  color: #999;
+  font-size: 16px;
+  background: linear-gradient(120deg, #F7F7F7 50%, #E9E8E8 50%);
+  color: #333333;
 }
 
 .landingPage {
@@ -18,51 +19,48 @@ h2 {
   width: 100%;
   position: relative;
   overflow: hidden;
+  text-shadow: 1px 1px 2px black;
 }
 
-.landingPage #menu-icon {
+.landingPage header #menu-icon {
   display: none;
+  z-index: 1;
   background: url("../Assets/Hamburger.png") center;
   background-size: contain;
   background-repeat: no-repeat;
 }
 
-.landingPage .navBar {
+.landingPage header .navBar {
   z-index: 2;
   position: absolute;
   margin-top: 1em;
 }
 
-.landingPage .navBar ul {
+.landingPage header .navBar .closeButton {
+  display: none;
+}
+
+.landingPage header .navBar ul {
   list-style: none;
 }
 
-.landingPage .navBar li {
+.landingPage header .navBar ul li {
   display: block;
   float: left;
   padding: 1em;
+  font-size: 1.5em;
 }
 
-.landingPage .navBar a {
+.landingPage header .navBar ul a {
   text-decoration: none;
-  color: #fff;
+  color: #F7F7F7;
+  -webkit-transition: font-size 1s, border-bottom .5s;
+  transition: font-size 1s, border-bottom .5s;
 }
 
-.landingPage h2 {
-  color: #fff;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  position: absolute;
-  font-weight: bolder;
-  font-size: 4rem;
-  font-style: italic;
-  z-index: 2;
-  top: 50%;
-  left: 50%;
-  min-width: 626px;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+.landingPage header .navBar ul a:hover {
+  font-size: 1.3em;
+  border-bottom: .1em solid #fff;
 }
 
 .landingPage .landingImage {
@@ -72,19 +70,55 @@ h2 {
   background-size: cover;
   background-image: url("../Assets/LandingPage-min.jpg");
   min-height: 100vh;
-  width: 100vw;
-  -webkit-filter: contrast(60%);
-          filter: contrast(60%);
+}
+
+.landingPage .landingImage .overView {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.2);
+  height: 100vh;
+  color: #F7F7F7;
+}
+
+.landingPage .landingImage .overView h2 {
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-size: 4em;
+  z-index: 2;
+}
+
+.landingPage .landingImage .overView span {
+  font-size: 2em;
+  font-style: italic;
+}
+
+.landingPage .landingImage .overView span a {
+  color: #8E6F65;
+  font-weight: bolder;
 }
 
 .description {
   width: 100%;
-  position: relative;
+  overflow: hidden;
 }
 
 .description .contactInfoHolder {
-  padding: 2rem;
   margin: auto;
+  padding: 2em 1em 1em;
   width: 60%;
   height: 30%;
   overflow: hidden;
@@ -106,24 +140,144 @@ h2 {
   width: 60%;
   color: #999;
   margin: auto;
+  padding: 1em;
+}
+
+.description .descriptionContent h2 {
+  font-size: 3.5em;
+  color: #8E6F65;
+  font-weight: bolder;
+  text-shadow: 1px 1px 2px black;
 }
 
 .description .descriptionContent .descriptionBlock {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-size: 1.3rem;
-  line-height: 1.9rem;
-  margin-bottom: 2rem;
+  font-size: 1.5em;
+  line-height: 2em;
+  width: auto;
   color: #474544;
-  overflow: hidden;
+  margin: 1em 0;
+  -webkit-animation: tracking-in-expand-fwd-bottom 1s cubic-bezier(0.215, 0.61, 0.355, 1.25) 1.5s both;
+  animation: tracking-in-expand-fwd-bottom 1s cubic-bezier(0.215, 0.61, 0.355, 1.25) 1.5s both;
+}
+
+@-webkit-keyframes tracking-in-expand-fwd-bottom {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-transform: translateZ(-700px) translateY(500px);
+    transform: translateZ(-700px) translateY(500px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateY(0);
+    transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes tracking-in-expand-fwd-bottom {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-transform: translateZ(-700px) translateY(500px);
+    transform: translateZ(-700px) translateY(500px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateY(0);
+    transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
+}
+
+.description .descriptionContent .descriptionBlock:nth-child(3) {
+  -webkit-animation: tracking-in-expand-fwd-bottom 1s cubic-bezier(0.215, 0.61, 0.355, 1.25) 3.5s both;
+  animation: tracking-in-expand-fwd-bottom 1s cubic-bezier(0.215, 0.61, 0.355, 1.25) 3.5s both;
+}
+
+@-webkit-keyframes tracking-in-expand-fwd-bottom {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-transform: translateZ(-700px) translateY(500px);
+    transform: translateZ(-700px) translateY(500px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateY(0);
+    transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes tracking-in-expand-fwd-bottom {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-transform: translateZ(-700px) translateY(500px);
+    transform: translateZ(-700px) translateY(500px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateY(0);
+    transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
+}
+
+.description .descriptionContent .descriptionBlock:nth-child(4) {
+  -webkit-animation: tracking-in-expand-fwd-bottom 1s cubic-bezier(0.215, 0.61, 0.355, 1.25) 5.5s both;
+  animation: tracking-in-expand-fwd-bottom 1s cubic-bezier(0.215, 0.61, 0.355, 1.25) 5.5s both;
+}
+
+@-webkit-keyframes tracking-in-expand-fwd-bottom {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-transform: translateZ(-700px) translateY(500px);
+    transform: translateZ(-700px) translateY(500px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateY(0);
+    transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes tracking-in-expand-fwd-bottom {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-transform: translateZ(-700px) translateY(500px);
+    transform: translateZ(-700px) translateY(500px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateY(0);
+    transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
 }
 
 .contactBackground {
-  max-height: 100vh;
+  min-height: 50vh;
   width: 100%;
-  margin: auto;
   position: relative;
-  padding: 0 0 2rem;
 }
 
 .contactBackground .contactForm {
@@ -131,11 +285,12 @@ h2 {
   display: grid;
   width: 60%;
   margin: auto;
+  padding: 1em;
   -ms-grid-columns: auto auto auto;
       grid-template-columns: auto auto auto;
   -ms-grid-rows: 3em 1.5em 1.5em 1.5em 1.5em 12em 1.5em;
       grid-template-rows: 3em 1.5em 1.5em 1.5em 1.5em 12em 1.5em;
-  grid-gap: 0.3em 0.6em;
+  grid-gap: 2em 0.6em;
 }
 
 .contactBackground .contactForm h2 {
@@ -143,28 +298,32 @@ h2 {
   -ms-grid-column-span: 3;
   grid-column: 1/4;
   width: auto;
+  font-size: 3.5em;
+  color: #8E6F65;
+  font-weight: bolder;
+  text-shadow: 1px 1px 2px black;
 }
 
 .contactBackground .contactForm label {
-  width: auto;
-  padding: 0;
-  margin: 0;
   -ms-grid-column: 1;
   grid-column: 1;
 }
 
-.contactBackground .contactForm #firstName, .contactBackground .contactForm #lastName, .contactBackground .contactForm #email, .contactBackground .contactForm #number, .contactBackground .contactForm #submit, .contactBackground .contactForm #message {
+.contactBackground .contactForm #firstName, .contactBackground .contactForm #lastName, .contactBackground .contactForm #email, .contactBackground .contactForm #subject, .contactBackground .contactForm #submit, .contactBackground .contactForm #message {
   -ms-grid-column: 2;
   -ms-grid-column-span: 2;
   grid-column: 2/4;
   width: auto;
-  margin: 0;
+  padding: 1em;
+}
+
+.contactBackground .contactForm #submit {
+  padding: 0;
 }
 
 footer {
   margin-top: 5%;
-  height: 30vh;
-  min-height: 300px;
+  min-height: 20vh;
   background-color: #333;
   color: #fff;
   overflow: hidden;
@@ -172,7 +331,7 @@ footer {
 }
 
 footer .contactInfoHolder {
-  padding: 2rem;
+  padding: 2em;
   margin: auto;
   width: 60%;
   display: table;
@@ -189,145 +348,62 @@ footer .contactInfoHolder .contactInfo a {
   color: #fff;
 }
 
-@media only screen and (min-width: 1260px) {
-  .landingPage .navBar a {
-    color: #1d1c1c;
-  }
+@media only screen and (min-width: 2060px) {
   .landingPage h2 {
-    color: #1d1c1c;
-    font-weight: 200;
-    font-stretch: expanded;
-  }
-  .landingPage .landingImage {
-    background: fixed no-repeat url("../Assets/LargerLandingPageScaled-min.jpg") top right;
-    background-size: cover;
-  }
-  .description .contactInfoHolder .contactInfo {
-    font-size: 1.2em;
-  }
-  .description .contactInfoHolder .portfolioPic {
-    height: 280px;
-    width: 280px;
-  }
-  .description .descriptionContent {
-    font-size: 2.5em;
-  }
-  .description .descriptionContent .descriptionBlock {
-    font-size: 1.3rem;
-    line-height: 1.4em;
-  }
-}
-
-@media only screen and (min-width: 1900px) {
-  .landingPage h2 {
-    font-size: 5rem;
+    font-size: 6em;
   }
   .landingPage li {
-    font-size: 1.4rem;
-  }
-  .description .descriptionContent {
-    font-size: 3rem;
-    margin-top: 5%;
-  }
-  .description .descriptionContent .descriptionBlock {
-    font-size: 1.5rem;
-    line-height: 2em;
-    width: auto;
-  }
-  .contactBackground .contactForm {
-    font-size: 1.5rem;
-    margin-top: 5%;
-  }
-}
-
-@media only screen and (min-width: 2560px) {
-  .landingPage h2 {
-    font-size: 6rem;
-  }
-  .landingPage li {
-    font-size: 2rem;
+    font-size: 2em;
   }
   .description .contactInfoHolder .contactInfo {
-    font-size: 2rem;
+    font-size: 1.5em;
   }
   .description .contactInfoHolder .portfolioPic {
-    height: 380px;
-    width: 380px;
-  }
-  .description .descriptionContent {
-    font-size: 4rem;
-  }
-  .description .descriptionContent .descriptionBlock {
-    font-size: 2rem;
-  }
-  .contactBackground .contactForm {
-    margin-top: 10%;
-    font-size: 2rem;
+    height: 300px;
+    width: 300px;
   }
   footer .contactInfoHolder .contactInfo {
-    font-size: 1.5rem;
+    font-size: 1.5em;
   }
 }
 
-@media only screen and (max-width: 650px) {
-  .landingPage #menu-icon {
-    display: block;
-    width: 40px;
-    height: 40px;
-    padding-left: 1em;
-  }
-  .landingPage nav ul, .landingPage nav:active ul {
-    position: relative;
-    display: none;
-    width: 1rem;
-  }
-  .landingPage nav li {
-    text-align: center;
-    width: 6rem;
-    margin: 0;
-  }
-  .landingPage nav li a {
-    float: left;
-  }
-  .landingPage nav:hover ul {
-    display: block;
-  }
-  .landingPage h2 {
-    min-width: 0;
-    font-size: 3.8rem;
+@media only screen and (max-width: 1024px) {
+  body {
+    font-size: 16px;
   }
   .landingPage .landingImage {
     background-image: url("../Assets/LongerLandingPage-min.jpg");
   }
+  .landingPage .landingImage .overView h2 {
+    font-size: 3em;
+  }
+  .landingPage .landingImage .overView span {
+    font-size: 1.5em;
+  }
   .description .contactInfoHolder {
     margin: auto;
-    width: 80%;
+    width: 100%;
   }
   .description .contactInfoHolder .contactInfo {
     min-width: 275px;
     margin: auto;
-    margin-top: 2rem;
-    font-size: 1rem;
+    margin-top: 2em;
+    font-size: 1em;
     display: block;
   }
   .description .contactInfoHolder .portfolioPic {
     display: none;
   }
-  .description h2 {
-    font-size: 2.5rem;
-  }
   .description .descriptionContent {
-    width: 80%;
+    width: 100%;
+    text-align: center;
   }
   .description .descriptionContent .descriptionBlock {
-    font-size: 1.3rem;
-    line-height: 1.9rem;
+    font-size: 1.3em;
+    line-height: 1.9em;
   }
   .contactBackground .contactForm {
-    width: 80%;
-  }
-  .contactBackground .contactForm h2 {
-    font-size: 2em;
+    width: 100%;
   }
   .contactBackground .contactForm h2 .replace {
     position: relative;
@@ -336,28 +412,104 @@ footer .contactInfoHolder .contactInfo a {
   .contactBackground .contactForm h2 .replace::before {
     visibility: visible;
     position: relative;
-    content: "Sign up with Janique";
+    content: "Sign up Here";
   }
-  footer {
-    height: 40vh;
+  .contactBackground .contactForm h2 .replace::before {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   footer .contactInfoHolder {
-    padding: 2rem 0;
+    padding: 2em 1em;
     margin: auto;
-    width: 80%;
+    width: 100%;
   }
   footer .contactInfoHolder .contactInfo {
-    margin: auto;
-    font-size: 1rem;
-    display: block;
-    padding: 0 0;
-  }
-  footer .contactInfoHolder .contactInfo a {
-    color: #fff;
+    font-size: 1em;
   }
 }
 
-@media only screen and (max-width: 430px) {
+@media only screen and (max-width: 800px) {
+  .landingPage header #menu-icon {
+    display: block;
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 1em;
+    left: 1em;
+  }
+  .landingPage header .navBar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 4;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    -webkit-transition: 0.7s;
+    transition: 0.7s;
+    overflow-x: hidden;
+    margin-top: 0;
+  }
+  .landingPage header .navBar a {
+    padding: 1rem 2rem;
+    text-decoration: none;
+    color: #818181;
+    display: block;
+  }
+  .landingPage header .navBar ul {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .landingPage header .navBar ul a {
+    font-size: 1.5em;
+  }
+  .landingPage header .navBar ul a:hover {
+    font-size: 2em;
+  }
+  .landingPage header .navBar .closeButton {
+    display: block;
+    font-size: 5em;
+    position: absolute;
+    right: 5%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  body {
+    font-size: 12px;
+  }
+  .landingImage .overView h2 {
+    letter-spacing: 0em;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 1em;
+  }
+  .landingImage .overView span {
+    font-size: 2em;
+    font-style: italic;
+  }
+  .contactBackground .contactForm h2 {
+    font-size: 3em;
+  }
   .contactBackground .contactForm h2 .replace {
     position: relative;
     visibility: hidden;
@@ -400,7 +552,7 @@ footer .contactInfoHolder .contactInfo a {
     width: 100%;
     margin: auto;
     position: relative;
-    padding: 0 0 2rem;
+    padding: 0 0 2em;
   }
   .contactBackground .contactForm {
     display: -webkit-box;
@@ -444,7 +596,7 @@ footer .contactInfoHolder .contactInfo a {
     position: relative;
   }
   footer .contactInfoHolder {
-    padding: 2rem;
+    padding: 2em;
     margin: auto;
     width: 60%;
     display: table;

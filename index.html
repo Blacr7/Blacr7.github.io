@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="Description" content="Real Estate agent in florida, for first time buyers or experienced investors">
     <meta name="theme-color" content="#fff"/>
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-    <title>Janique Mynot Realty</title>
+    <title>Janique Mynot | Real Estate Agent</title>
     <link rel="stylesheet" href="Styles/styles.css">
+    <script src="script.js"></script>
 </head>
 
 <!-- TODO ADD INTERNET EXPLORER CODE -->
@@ -18,10 +18,9 @@
 
         <section class="landingPage">
             <header>
+                <a href="#" onclick="openNav()" id="menu-icon"></a>
                 <nav class="navBar">
-
-                    <a href="#" id="menu-icon" alt="hamburger icon"></a>
-
+                    <a href="javascript:void(0)" class="closeButton" onclick="closeNav()">&times;</a>
                     <ul>
                         <li><a href="#goToAbout">About Me</a></li>
                         <li><a href="#goToContact">Contact Me</a></li>
@@ -29,14 +28,18 @@
                     </ul>
                 </nav>
             </header>
-
-            <h2>Janique Mynot</h2>
-            <div class="landingImage"></div>
+                
+            <div class="landingImage">
+                <div class="overView">
+                    <h2>professional Realtor</h2>
+                    <span class="outerSpan">Thinking about buying or <a href="#goToContact">Selling A Home?</a></span>
+                </div>
+            </div>
         </section>
         
 
         <section class="description" id="goToAbout">
-
+            
             <div class="contactInfoHolder"> 
                 <ul class="contactInfo">
                     <li><a href="mailto:Jmynot@gmail.com">Jmynot@gmail.com</a> </li>
@@ -64,7 +67,6 @@
                         Janique is a member of The Greater Fort Lauderdale board of realtors as well as The National Association  of Realtors, which is both composed of an elite network of real estate professionals that prides themselves in ensuring that the buying and selling process is handled efficiently.  She is now providing services to residents of Broward, Palm beach and St. Lucie counties.
                     </span>
                 </div>
-
                 <div class="descriptionBlock">
                     <span>
                         She is proudly associated with Home Values Realtly, LLC, where there is a team of professionals that is committed to your real estate needs, by ensuring that the buying and selling process is a satisfying and memorable one. 
@@ -74,27 +76,25 @@
 
         </section>
 
-        <div class="divider"></div>
-
         <section id="goToContact" class="contactBackground">
             <div class="contact">
                 <form class="contactForm" method="post" action="https://formspree.io/Jmynot@gmail.com">
                     <h2 class="formHeader"><span class="replace">Sign up with Janique Mynot</span></h2>
 
                     <label for="firstName" id="fname"><span class="replace">First Name</span></label>
-                    <input type="text" id="firstName" name="First Name" required>
+                    <input type="text" id="firstName" name="First Name" placeholder="First Name"required>
 
                     <label for="lastName" id="lname"><span class="replace">Last Name</span></label>
-                    <input type="text" id="lastName" name="Last Name" required>
+                    <input type="text" id="lastName" name="Last Name" placeholder="Last Name">
 
                     <label for="email" >Email</label>
-                    <input type="email" id="email" name="Email Address" required>
+                    <input type="email" id="email" name="Email Address" placeholder="Email" required>
 
-                    <label for="number">Number</label>
-                    <input type="text" id="number" name="Phone Number">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="Subject" placeholder="Give a quick summary">
 
                     <label for="Message">Message</label>
-                    <textarea name="Message" id="message"></textarea>
+                    <textarea name="Message" id="message" placeholder="Write your Content here!" required></textarea>
                         
                     <input type="submit" id="submit" name="submit">
                 </form>
