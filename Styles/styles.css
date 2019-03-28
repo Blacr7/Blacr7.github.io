@@ -42,11 +42,18 @@ body {
 
 .landingPage header .navBar ul {
   list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100vw;
 }
 
 .landingPage header .navBar ul li {
   display: block;
-  float: left;
   padding: 1em;
   font-size: 1.5em;
 }
@@ -371,6 +378,13 @@ footer .contactInfoHolder .contactInfo a {
   body {
     font-size: 16px;
   }
+  .landingPage header .navBar ul {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    text-align: left;
+  }
   .landingPage .landingImage {
     background-image: url("../Assets/LongerLandingPage-min.jpg");
   }
@@ -451,8 +465,8 @@ footer .contactInfoHolder .contactInfo a {
     z-index: 4;
     top: 0;
     background-color: rgba(0, 0, 0, 0.9);
-    -webkit-transition: 0.7s;
-    transition: 0.7s;
+    -webkit-transition: 1s;
+    transition: 1s;
     overflow-x: hidden;
     margin-top: 0;
   }
@@ -478,6 +492,7 @@ footer .contactInfoHolder .contactInfo a {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    text-align: center;
   }
   .landingPage header .navBar ul a {
     font-size: 1.5em;

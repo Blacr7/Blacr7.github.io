@@ -105,18 +105,21 @@ body{
 
             ul{
                 list-style: none;
+                display:flex;
+                flex-direction: row;
+                width: 100vw;
+
                 li{
                     display: block;
-                    float: left;
                     padding: 1em;
                     font-size: 1.5em;
-        
                 }
 
                 a{
                     text-decoration: none;
                     color:$MainColor;
                     transition: font-size 1s, border-bottom .5s;
+                    
                 }
  
                 a:hover{
@@ -321,7 +324,14 @@ footer{
         font-size: 16px;
     }
     .landingPage{
-
+        header{
+            .navBar{
+                ul{
+                    flex-direction: row;
+                    text-align: left;
+                }
+            }
+        }
         .landingImage{
             background-image: url("../Assets/LongerLandingPage-min.jpg");
 
@@ -413,7 +423,7 @@ footer{
                 z-index: 4;
                 top: 0;
                 background-color: rgba(0,0,0, 0.9);
-                transition: 0.7s;
+                transition: 1s;
                 overflow-x: hidden;
                 margin-top: 0;
                 
@@ -431,6 +441,7 @@ footer{
                     justify-content: center;
                     flex-wrap: wrap;
                     flex-direction: column;
+                    text-align: center;
 
                     a{
                         font-size: 1.5em;
