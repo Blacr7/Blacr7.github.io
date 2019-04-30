@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Lato");
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
 * {
   margin: 0;
   padding: 0;
@@ -8,10 +8,10 @@
 }
 
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: 'montserrat';
+  background: #E9E8E8;
   font-size: 16px;
-  background: linear-gradient(120deg, #F7F7F7 50%, #E9E8E8 50%);
-  color: #333333;
+  color: #555555;
 }
 
 .landingPage {
@@ -31,7 +31,7 @@ body {
 }
 
 .landingPage header .navBar {
-  z-index: 2;
+  z-index: 3;
   position: absolute;
   margin-top: 1em;
 }
@@ -60,13 +60,12 @@ body {
 
 .landingPage header .navBar ul a {
   text-decoration: none;
-  color: #F7F7F7;
-  -webkit-transition: font-size 1s, border-bottom .5s;
-  transition: font-size 1s, border-bottom .5s;
+  color: #E9E8E8;
+  -webkit-transition: border-bottom .5s;
+  transition: border-bottom .5s;
 }
 
 .landingPage header .navBar ul a:hover {
-  font-size: 1.3em;
   border-bottom: .1em solid #fff;
 }
 
@@ -95,12 +94,17 @@ body {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   text-align: center;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.4);
   height: 100vh;
-  color: #F7F7F7;
+  color: #E9E8E8;
 }
 
 .landingPage .landingImage .overView h2 {
+  font-size: 3.5em;
+  font-family: "verdana";
+  color: #8E6F65;
+  font-weight: 900;
+  color: inherit;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   font-weight: bolder;
@@ -118,172 +122,236 @@ body {
   font-weight: bolder;
 }
 
-.description {
-  width: 100%;
-  overflow: hidden;
-}
-
-.description .contactInfoHolder {
+.landingPage .landingImage .scrollAnchor {
+  font-size: 2.5em;
+  text-decoration: none;
+  -webkit-animation: pulsate-fwd 2s ease-in-out infinite both;
+  animation: pulsate-fwd 2s ease-in-out infinite both;
+  position: absolute;
+  bottom: 10%;
+  right: 0;
+  left: 0;
   margin: auto;
-  padding: 2em 1em 1em;
-  width: 60%;
-  height: 30%;
-  overflow: hidden;
+  color: #E9E8E8;
+  border-radius: 5em;
+  width: 1.56em;
+  padding: .32em;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  text-shadow: none;
 }
 
-.description .contactInfoHolder .contactInfo {
-  display: inline-block;
-  list-style: none;
-  line-height: 2em;
+@-webkit-keyframes pulsate-fwd {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
 }
 
-.description .contactInfoHolder .portfolioPic {
-  height: 200px;
-  width: 200px;
-  float: right;
+@keyframes pulsate-fwd {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
 }
 
-.description .descriptionContent {
-  width: 60%;
-  color: #999;
-  margin: auto;
-  padding: 1em;
-}
-
-.description .descriptionContent h2 {
-  font-size: 3.5em;
+.landingPage .landingImage .scrollAnchor:hover {
+  background: #E9E8E8;
   color: #8E6F65;
-  font-weight: bolder;
-  text-shadow: 1px 1px 2px black;
 }
 
-.description .descriptionContent .descriptionBlock {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+.descriptionHeader .contactInfoHolder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: relative;
+  background: #8E6F65;
+  height: 100vh;
+}
+
+.descriptionHeader .contactInfoHolder .contactInfo {
+  width: 50%;
+  min-height: auto;
+  background: #F7F7F7;
+  padding: 1em 2em;
+  top: 10%;
+  right: 25%;
+  margin-right: -12.5%;
+  position: absolute;
+  -webkit-box-shadow: 1px 1px 10px #555555;
+          box-shadow: 1px 1px 10px #555555;
+}
+
+.descriptionHeader .contactInfoHolder .contactInfo .infoHeader {
+  text-align: center;
+}
+
+.descriptionHeader .contactInfoHolder .contactInfo .infoHeader .portfolioPic {
+  height: 250px;
+  width: 250px;
+  display: inline-block;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.descriptionHeader .contactInfoHolder .contactInfo .infoHeader h2 {
+  font-size: 3.5em;
+  font-family: "verdana";
+  color: #8E6F65;
+  font-weight: 900;
+}
+
+.descriptionHeader .contactInfoHolder .contactInfo .infoHeader p {
+  font-weight: 600;
+  font-size: 1.2em;
+}
+
+.descriptionHeader .contactInfoHolder .contactInfo .infoBody {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.descriptionHeader .contactInfoHolder .contactInfo .infoBody dl {
+  font-size: 1.2em;
+}
+
+.descriptionHeader .contactInfoHolder .contactInfo .infoBody dl dt {
+  margin: 1em 0 0;
+}
+
+.descriptionHeader .contactInfoHolder .contactInfo .infoBody dl dd {
+  margin: 0  0 1em;
+}
+
+.descriptionHeader .contactInfoHolder .contactInfo .infoBody dl:nth-child(2) {
+  text-align: right;
+}
+
+.descriptionHeader .contactInfoHolder .backgroundImg {
+  display: inline-block;
+  width: 50%;
+  height: 100%;
+  -webkit-box-shadow: 1px 1px 10px #555555;
+          box-shadow: 1px 1px 10px #555555;
+  background-image: url("../Assets/Office-min.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.descriptionBody {
+  background: #FBFBFB;
+}
+
+.descriptionBody .descriptionContent {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.descriptionBody .descriptionContent .descriptionBlock {
+  min-height: 100%;
+  width: 50%;
+  margin: auto;
+  line-height: 1.8em;
+  z-index: 2;
+}
+
+.descriptionBody .descriptionContent .descriptionBlock h2 {
+  font-size: 3.5em;
+  font-family: "verdana";
+  color: #8E6F65;
+  font-weight: 900;
+  margin-left: -55%;
+  padding: 1em 1rem .5em;
+  white-space: nowrap;
+}
+
+.descriptionBody .descriptionContent .descriptionBlock p {
+  padding: 1em;
+  width: 80%;
+  font-size: 1.25em;
+  font-weight: 100;
+  color: #555555;
+}
+
+.descriptionBody .descriptionContent .descriptionBlock p:nth-child(2) {
+  margin-left: -30%;
+}
+
+.descriptionBody .descriptionContent .descriptionBlock p:nth-child(3) {
+  margin-left: -5%;
+}
+
+.descriptionBody .descriptionContent .descriptionBlock p:nth-child(4) {
+  margin-left: 20%;
+}
+
+.descriptionBody .descriptionContent .descriptionBlock i {
   font-size: 1.5em;
-  line-height: 2em;
-  width: auto;
-  color: #474544;
-  margin: 1em 0;
-  -webkit-animation: tracking-in-expand-fwd-bottom 1s cubic-bezier(0.215, 0.61, 0.355, 1.25) 1.5s both;
-  animation: tracking-in-expand-fwd-bottom 1s cubic-bezier(0.215, 0.61, 0.355, 1.25) 1.5s both;
+  display: block;
+  text-align: center;
+  margin: 0 0 .5em;
 }
 
-@-webkit-keyframes tracking-in-expand-fwd-bottom {
-  0% {
-    letter-spacing: -0.5em;
-    -webkit-transform: translateZ(-700px) translateY(500px);
-    transform: translateZ(-700px) translateY(500px);
-    opacity: 0;
-  }
-  40% {
-    opacity: 0.6;
-  }
-  100% {
-    -webkit-transform: translateZ(0) translateY(0);
-    transform: translateZ(0) translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes tracking-in-expand-fwd-bottom {
-  0% {
-    letter-spacing: -0.5em;
-    -webkit-transform: translateZ(-700px) translateY(500px);
-    transform: translateZ(-700px) translateY(500px);
-    opacity: 0;
-  }
-  40% {
-    opacity: 0.6;
-  }
-  100% {
-    -webkit-transform: translateZ(0) translateY(0);
-    transform: translateZ(0) translateY(0);
-    opacity: 1;
-  }
-}
-
-.description .descriptionContent .descriptionBlock:nth-child(3) {
-  -webkit-animation: tracking-in-expand-fwd-bottom 1s cubic-bezier(0.215, 0.61, 0.355, 1.25) 3.5s both;
-  animation: tracking-in-expand-fwd-bottom 1s cubic-bezier(0.215, 0.61, 0.355, 1.25) 3.5s both;
-}
-
-@-webkit-keyframes tracking-in-expand-fwd-bottom {
-  0% {
-    letter-spacing: -0.5em;
-    -webkit-transform: translateZ(-700px) translateY(500px);
-    transform: translateZ(-700px) translateY(500px);
-    opacity: 0;
-  }
-  40% {
-    opacity: 0.6;
-  }
-  100% {
-    -webkit-transform: translateZ(0) translateY(0);
-    transform: translateZ(0) translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes tracking-in-expand-fwd-bottom {
-  0% {
-    letter-spacing: -0.5em;
-    -webkit-transform: translateZ(-700px) translateY(500px);
-    transform: translateZ(-700px) translateY(500px);
-    opacity: 0;
-  }
-  40% {
-    opacity: 0.6;
-  }
-  100% {
-    -webkit-transform: translateZ(0) translateY(0);
-    transform: translateZ(0) translateY(0);
-    opacity: 1;
-  }
-}
-
-.description .descriptionContent .descriptionBlock:nth-child(4) {
-  -webkit-animation: tracking-in-expand-fwd-bottom 1s cubic-bezier(0.215, 0.61, 0.355, 1.25) 5.5s both;
-  animation: tracking-in-expand-fwd-bottom 1s cubic-bezier(0.215, 0.61, 0.355, 1.25) 5.5s both;
-}
-
-@-webkit-keyframes tracking-in-expand-fwd-bottom {
-  0% {
-    letter-spacing: -0.5em;
-    -webkit-transform: translateZ(-700px) translateY(500px);
-    transform: translateZ(-700px) translateY(500px);
-    opacity: 0;
-  }
-  40% {
-    opacity: 0.6;
-  }
-  100% {
-    -webkit-transform: translateZ(0) translateY(0);
-    transform: translateZ(0) translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes tracking-in-expand-fwd-bottom {
-  0% {
-    letter-spacing: -0.5em;
-    -webkit-transform: translateZ(-700px) translateY(500px);
-    transform: translateZ(-700px) translateY(500px);
-    opacity: 0;
-  }
-  40% {
-    opacity: 0.6;
-  }
-  100% {
-    -webkit-transform: translateZ(0) translateY(0);
-    transform: translateZ(0) translateY(0);
-    opacity: 1;
-  }
+.descriptionBody .descriptionContent img {
+  display: block;
+  width: 50%;
+  min-height: 100%;
 }
 
 .contactBackground {
   min-height: 50vh;
   width: 100%;
+  position: relative;
+}
+
+.contactBackground h2 {
+  font-size: 3.5em;
+  font-family: "verdana";
+  color: #8E6F65;
+  font-weight: 900;
+  text-align: center;
+  padding: .5em;
   position: relative;
 }
 
@@ -293,27 +361,17 @@ body {
   width: 60%;
   margin: auto;
   padding: 1em;
-  -ms-grid-columns: auto auto auto;
-      grid-template-columns: auto auto auto;
-  -ms-grid-rows: 3em 1.5em 1.5em 1.5em 1.5em 12em 1.5em;
-      grid-template-rows: 3em 1.5em 1.5em 1.5em 1.5em 12em 1.5em;
+  -ms-grid-columns: 20% auto auto;
+      grid-template-columns: 20% auto auto;
+  -ms-grid-rows: 2.5em 2.5em 2.5em 2.5em 12em 2.5em;
+      grid-template-rows: 2.5em 2.5em 2.5em 2.5em 12em 2.5em;
   grid-gap: 2em 0.6em;
-}
-
-.contactBackground .contactForm h2 {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
-  grid-column: 1/4;
-  width: auto;
-  font-size: 3.5em;
-  color: #8E6F65;
-  font-weight: bolder;
-  text-shadow: 1px 1px 2px black;
 }
 
 .contactBackground .contactForm label {
   -ms-grid-column: 1;
   grid-column: 1;
+  font-size: 1.5em;
 }
 
 .contactBackground .contactForm #firstName, .contactBackground .contactForm #lastName, .contactBackground .contactForm #email, .contactBackground .contactForm #subject, .contactBackground .contactForm #submit, .contactBackground .contactForm #message {
@@ -356,27 +414,88 @@ footer .contactInfoHolder .contactInfo a {
 }
 
 @media only screen and (min-width: 2060px) {
-  .landingPage h2 {
-    font-size: 6em;
+  body {
+    font-size: 20px;
   }
-  .landingPage li {
-    font-size: 2em;
+  .descriptionHeader .contactInfoHolder {
+    height: 100vh;
   }
-  .description .contactInfoHolder .contactInfo {
-    font-size: 1.5em;
+  .descriptionHeader .contactInfoHolder .contactInfo {
+    width: 45%;
+    height: auto;
+    background: #F7F7F7;
+    padding: 5em 5em 2.5em 5em;
+    top: 0;
+    right: 50%;
+    margin-right: -25%;
+    position: absolute;
+    -webkit-box-shadow: 1px 1px 10px #555555;
+            box-shadow: 1px 1px 10px #555555;
   }
-  .description .contactInfoHolder .portfolioPic {
-    height: 300px;
-    width: 300px;
+  .descriptionHeader .contactInfoHolder .contactInfo .infoHeader .portfolioPic {
+    height: 40%;
+    width: 40%;
   }
   footer .contactInfoHolder .contactInfo {
     font-size: 1.5em;
   }
 }
 
+@media only screen and (max-width: 1200px) {
+  .descriptionBody .descriptionContent {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-line-pack: justify;
+        align-content: space-between;
+    position: relative;
+  }
+  .descriptionBody .descriptionContent img {
+    width: 100%;
+    position: absolute;
+    opacity: 0.4;
+    -o-object-fit: none;
+       object-fit: none;
+    -o-object-position: bottom left;
+       object-position: bottom left;
+  }
+  .descriptionBody .descriptionContent .descriptionBlock {
+    height: 100%;
+    margin: unset;
+    background: rgba(142, 111, 101, 0.95);
+  }
+  .descriptionBody .descriptionContent .descriptionBlock h2 {
+    margin-left: unset;
+    text-align: center;
+    width: 200%;
+    background: #FBFBFB;
+    padding: 1em 0;
+  }
+  .descriptionBody .descriptionContent .descriptionBlock p {
+    width: 100%;
+    color: #ffffff;
+  }
+  .descriptionBody .descriptionContent .descriptionBlock p:nth-child(2) {
+    margin-left: unset;
+  }
+  .descriptionBody .descriptionContent .descriptionBlock p:nth-child(3) {
+    margin-left: unset;
+  }
+  .descriptionBody .descriptionContent .descriptionBlock p:nth-child(4) {
+    margin-left: unset;
+  }
+  .descriptionBody .descriptionContent .descriptionBlock i {
+    text-align: initial;
+  }
+}
+
 @media only screen and (max-width: 1024px) {
   body {
-    font-size: 16px;
+    font-size: 15px;
+  }
+  h2 {
+    font-size: 3em !important;
   }
   .landingPage header .navBar ul {
     -webkit-box-orient: horizontal;
@@ -388,68 +507,12 @@ footer .contactInfoHolder .contactInfo a {
   .landingPage .landingImage {
     background-image: url("../Assets/LongerLandingPage-min.jpg");
   }
-  .landingPage .landingImage .overView h2 {
-    font-size: 3em;
-  }
-  .landingPage .landingImage .overView span {
-    font-size: 1.5em;
-  }
-  .description .contactInfoHolder {
-    margin: auto;
-    width: 100%;
-  }
-  .description .contactInfoHolder .contactInfo {
-    min-width: 275px;
-    margin: auto;
-    margin-top: 2em;
-    font-size: 1em;
-    display: block;
-  }
-  .description .contactInfoHolder .portfolioPic {
-    display: none;
-  }
-  .description .descriptionContent {
-    width: 100%;
-    text-align: center;
-  }
-  .description .descriptionContent .descriptionBlock {
-    font-size: 1.3em;
-    line-height: 1.9em;
-  }
   .contactBackground .contactForm {
     width: 100%;
   }
-  .contactBackground .contactForm h2 .replace {
-    position: relative;
-    visibility: hidden;
-  }
-  .contactBackground .contactForm h2 .replace::before {
-    visibility: visible;
-    position: relative;
-    content: "Sign up Here";
-  }
-  .contactBackground .contactForm h2 .replace::before {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  footer .contactInfoHolder {
-    padding: 2em 1em;
-    margin: auto;
-    width: 100%;
-  }
-  footer .contactInfoHolder .contactInfo {
-    font-size: 1em;
-  }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 830px) {
   .landingPage header #menu-icon {
     display: block;
     position: absolute;
@@ -497,14 +560,39 @@ footer .contactInfoHolder .contactInfo a {
   .landingPage header .navBar ul a {
     font-size: 1.5em;
   }
-  .landingPage header .navBar ul a:hover {
-    font-size: 2em;
-  }
   .landingPage header .navBar .closeButton {
     display: block;
     font-size: 5em;
     position: absolute;
     right: 5%;
+  }
+  .descriptionHeader .contactInfoHolder {
+    height: 840px;
+  }
+  .descriptionHeader .contactInfoHolder .contactInfo {
+    width: 80%;
+    right: 20%;
+    margin-right: -10%;
+  }
+  .descriptionHeader .contactInfoHolder .backgroundImg {
+    width: 100%;
+    background-position: bottom center;
+    background-size: contain;
+  }
+  .descriptionBody .descriptionContent .descriptionBlock {
+    width: 100%;
+    background: rgba(142, 111, 101, 0.75);
+  }
+  .descriptionBody .descriptionContent .descriptionBlock h2 {
+    width: 100%;
+  }
+  .descriptionBody .descriptionContent .descriptionBlock p {
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.3);
+  }
+  .descriptionBody .descriptionContent img {
+    -o-object-position: center center;
+       object-position: center center;
   }
 }
 
@@ -522,35 +610,31 @@ footer .contactInfoHolder .contactInfo a {
     font-size: 2em;
     font-style: italic;
   }
-  .contactBackground .contactForm h2 {
-    font-size: 3em;
+  .descriptionHeader .contactInfoHolder {
+    height: unset;
+    min-height: 100%;
   }
-  .contactBackground .contactForm h2 .replace {
+  .descriptionHeader .contactInfoHolder .contactInfo {
+    all: unset;
     position: relative;
-    visibility: hidden;
+    height: 100%;
+    width: 100%;
+    background: #F7F7F7;
+    padding: 1em;
+    margin: 2em 0;
+    -webkit-box-shadow: 1px 1px 10px #555555;
+            box-shadow: 1px 1px 10px #555555;
   }
-  .contactBackground .contactForm h2 .replace::before {
-    visibility: visible;
-    position: relative;
-    content: "Sign up here";
+  .descriptionHeader .contactInfoHolder .contactInfo .infoHeader .portfolioPic {
+    height: 200px;
+    width: 200px;
   }
-  .contactBackground .contactForm #fname .replace {
-    position: relative;
-    visibility: hidden;
+  .descriptionHeader .contactInfoHolder .backgroundImg {
+    display: none;
   }
-  .contactBackground .contactForm #fname .replace::before {
-    visibility: visible;
-    position: relative;
-    content: "First";
-  }
-  .contactBackground .contactForm #lname .replace {
-    position: relative;
-    visibility: hidden;
-  }
-  .contactBackground .contactForm #lname .replace::before {
-    visibility: visible;
-    position: relative;
-    content: "Last";
+  .contactBackground .contactForm {
+    -ms-grid-columns: 30% auto auto;
+        grid-template-columns: 30% auto auto;
   }
 }
 

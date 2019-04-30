@@ -1,0 +1,62 @@
+$MainColor: #E9E8E8;
+$secondaryColor: #8E6F65;
+$tertiaryColor: #555555;
+$fourthColor: #F7F7F7;
+
+@mixin h2{
+    font-size: 3.5em;
+    font-family: "verdana";
+    color: $secondaryColor;
+    font-weight: 900;
+}
+
+@mixin scrollAnchor() {
+	font-size: 2.5em;
+	text-decoration: none;
+	-webkit-animation: pulsate-fwd 2s ease-in-out infinite both;
+	        animation: pulsate-fwd 2s ease-in-out infinite both;
+	position: absolute;
+	bottom: 10%;
+		right: 0;
+		left: 0;
+	margin: auto;
+    color: $MainColor;
+    border-radius: 5em;
+    width: 1.56em;
+    padding: .32em;
+    transition: all 1s;
+    
+	@-webkit-keyframes pulsate-fwd {
+		0% {
+		  -webkit-transform: scale(1);
+				  transform: scale(1);
+		}
+		50% {
+		  -webkit-transform: scale(1.3);
+				  transform: scale(1.3);
+		}
+		100% {
+		  -webkit-transform: scale(1);
+				  transform: scale(1);
+		}
+	  }
+	  @keyframes pulsate-fwd {
+		0% {
+		  -webkit-transform: scale(1);
+				  transform: scale(1);
+		}
+		50% {
+		  -webkit-transform: scale(1.3);
+				  transform: scale(1.3);
+		}
+		100% {
+		  -webkit-transform: scale(1);
+				  transform: scale(1);
+		}
+      }
+    
+    &:hover{
+        background: $MainColor;
+        color: $secondaryColor;
+    }
+}
