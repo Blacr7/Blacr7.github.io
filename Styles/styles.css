@@ -711,30 +711,15 @@ footer .contactInfoHolder .contactInfo a {
   }
 }
 
-@media only screen and (-ms-high-contrast: active) and (max-width: 650px) {
-  .contactBackground .contactForm h2 .replace {
-    position: relative;
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active), (max-width: 1200px) {
+  .contactBackground .contactForm {
+    width: 100%;
   }
-  .contactBackground .contactForm h2 .replace::after {
-    position: absolute;
-    content: "Sign up here";
+  .descriptionBody .descriptionContent .descriptionBlock {
+    margin: auto 0px;
   }
-  .contactBackground .contactForm #fname .replace {
-    position: relative;
-  }
-  .contactBackground .contactForm #fname .replace::after {
-    position: absolute;
-    content: "First";
-  }
-  .contactBackground .contactForm #lname .replace {
-    position: relative;
-  }
-  .contactBackground .contactForm #lname .replace::after {
-    position: absolute;
-    content: "Last";
-  }
-  footer .contactInfoHolder {
-    width: 80%;
+  .descriptionBody .descriptionContent .descriptionBlock h2, .descriptionBody .descriptionContent .descriptionBlock p:nth-child(2), .descriptionBody .descriptionContent .descriptionBlock p:nth-child(3), .descriptionBody .descriptionContent .descriptionBlock p:nth-child(4) {
+    margin-left: 0;
   }
 }
 /*# sourceMappingURL=styles.css.map */

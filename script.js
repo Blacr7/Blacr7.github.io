@@ -5,5 +5,3 @@ function openNav() {
 function closeNav() {
     document.getElementsByTagName("nav")[0].style.width = "0%";
 }
-
-
