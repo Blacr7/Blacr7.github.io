@@ -268,6 +268,7 @@ body {
 
 .descriptionBody {
   background: #FBFBFB;
+  min-height: 100vh;
 }
 
 .descriptionBody .descriptionContent {
@@ -638,7 +639,7 @@ footer .contactInfoHolder .contactInfo a {
   }
 }
 
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active), (-webkit-min-device-pixel-ratio: 0) {
   /* IE10+ CSS styles go here */
   .landingPage .landingImage {
     background-attachment: local;

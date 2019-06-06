@@ -274,7 +274,7 @@
     }
 }
 
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active), (-webkit-min-device-pixel-ratio:0) {
     /* IE10+ CSS styles go here */
     .landingPage{
         .landingImage{
@@ -305,7 +305,6 @@
             margin: auto;
     
             h2{
-               
                 width: auto;
                 font-size: 2em;
                 color: #999;
@@ -324,6 +323,7 @@
                 margin: 0;
                 padding: 1em;
             }
+
             #message{
                 height: 10em;
             }
@@ -355,9 +355,8 @@
             }
         }
     }
-
-    
 }
+
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active), (max-width: 1200px){
     .contactBackground{
         .contactForm{
