@@ -646,6 +646,9 @@ footer .contactInfoHolder .contactInfo a {
   .landingPage nav li a {
     text-shadow: 1px 0 black, 0 .6px black, .6px 0 black, 0 -.6px black;
   }
+  .descriptionBody {
+    min-height: 50vh;
+  }
   .contactBackground {
     max-height: 100vh;
     width: 100%;
