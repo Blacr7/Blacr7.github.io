@@ -198,6 +198,7 @@ body{
 .descriptionBody{
     background: #FBFBFB;
     min-height: 50vh;
+    overflow: auto;
     .descriptionContent{
         width: 100%;
         display: flex;
