@@ -408,7 +408,8 @@
             .descriptionBlock{
                 height: 100%;
                 margin: unset;
-                background: !important rgba(142, 111, 101, .95);
+                background: unset;
+                background-color: !important rgba(142, 111, 101, .95);
 
                 img{
                     background-attachment: local;
