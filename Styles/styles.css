@@ -730,66 +730,64 @@ footer .contactInfoHolder .contactInfo a {
   }
 }
 
-@media not all and (min-resolution: 0.001dpcm) {
-  @supports (-webkit-appearance: none) {
-    .landingPage .landingImage {
-      background-attachment: local;
-    }
-    .landingPage nav li a {
-      text-shadow: 1px 0 black, 0 .6px black, .6px 0 black, 0 -.6px black;
-    }
-    .descriptionBody {
-      min-height: 80vh;
-    }
-    .descriptionBody .descriptionContent .descriptionBlock {
-      height: 100%;
-      margin: unset;
-      background: rgba(142, 111, 101, 0.95);
-    }
-    .descriptionBody .descriptionContent .descriptionBlock img {
-      background-attachment: local;
-    }
-    .contactBackground {
-      max-height: 100vh;
-      width: 100%;
-      margin: auto;
-      position: relative;
-      padding: 0 0 2em;
-    }
-    .contactBackground .contactForm {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column;
-      -ms-flex-wrap: nowrap;
-          flex-wrap: nowrap;
-      width: 60%;
-      margin: auto;
-    }
-    .contactBackground .contactForm h2 {
-      width: auto;
-      font-size: 2em;
-      color: #999;
-    }
-    .contactBackground .contactForm label {
-      width: auto;
-      padding: 1em 0 1em 0;
-      margin: 0;
-    }
-    .contactBackground .contactForm #firstName, .contactBackground .contactForm #lastName, .contactBackground .contactForm #email, .contactBackground .contactForm #number, .contactBackground .contactForm #submit, .contactBackground .contactForm #message {
-      -webkit-box-flex: 1;
-          -ms-flex-positive: 1;
-              flex-grow: 1;
-      width: auto;
-      margin: 0;
-      padding: 1em;
-    }
-    .contactBackground .contactForm #message {
-      height: 10em;
-    }
+@supports (-webkit-text-size-adjust: none) and (not (-ms-ime-align: auto)) and (not (-moz-appearance: none)) {
+  .landingPage .landingImage {
+    background-attachment: local;
+  }
+  .landingPage nav li a {
+    text-shadow: 1px 0 black, 0 .6px black, .6px 0 black, 0 -.6px black;
+  }
+  .descriptionBody {
+    min-height: 80vh;
+  }
+  .descriptionBody .descriptionContent .descriptionBlock {
+    height: 100%;
+    margin: unset;
+    background: rgba(142, 111, 101, 0.95);
+  }
+  .descriptionBody .descriptionContent .descriptionBlock img {
+    background-attachment: local;
+  }
+  .contactBackground {
+    max-height: 100vh;
+    width: 100%;
+    margin: auto;
+    position: relative;
+    padding: 0 0 2em;
+  }
+  .contactBackground .contactForm {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    width: 60%;
+    margin: auto;
+  }
+  .contactBackground .contactForm h2 {
+    width: auto;
+    font-size: 2em;
+    color: #999;
+  }
+  .contactBackground .contactForm label {
+    width: auto;
+    padding: 1em 0 1em 0;
+    margin: 0;
+  }
+  .contactBackground .contactForm #firstName, .contactBackground .contactForm #lastName, .contactBackground .contactForm #email, .contactBackground .contactForm #number, .contactBackground .contactForm #submit, .contactBackground .contactForm #message {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    width: auto;
+    margin: 0;
+    padding: 1em;
+  }
+  .contactBackground .contactForm #message {
+    height: 10em;
   }
 }
 /*# sourceMappingURL=styles.css.map */

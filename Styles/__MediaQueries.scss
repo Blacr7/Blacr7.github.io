@@ -386,7 +386,8 @@
     }
 }
 
-@media not all and (min-resolution:.001dpcm) { @supports (-webkit-appearance:none) {
+@supports (-webkit-text-size-adjust:none) and (not (-ms-ime-align:auto))
+and (not (-moz-appearance:none)){
     .landingPage{
         .landingImage{
             background-attachment: local;
@@ -455,4 +456,4 @@
             }
         }
     }
-}}
+}
