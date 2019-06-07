@@ -268,7 +268,6 @@ body {
 
 .descriptionBody {
   background: #FBFBFB;
-  min-height: 80vh;
   overflow: auto;
 }
 
@@ -640,13 +639,16 @@ footer .contactInfoHolder .contactInfo a {
   }
 }
 
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active), (-webkit-min-device-pixel-ratio: 0) {
-  /* IE10+ and safari CSS styles go here */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  /* IE10+ CSS styles go here */
   .landingPage .landingImage {
     background-attachment: local;
   }
   .landingPage nav li a {
     text-shadow: 1px 0 black, 0 .6px black, .6px 0 black, 0 -.6px black;
+  }
+  .descriptionBody {
+    min-height: 80vh;
   }
   .descriptionBody .descriptionContent .descriptionBlock img {
     background-attachment: local;
@@ -716,7 +718,7 @@ footer .contactInfoHolder .contactInfo a {
   }
 }
 
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active), (-webkit-min-device-pixel-ratio: 0), (max-width: 1200px) {
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active), (max-width: 1200px) {
   .contactBackground .contactForm {
     width: 100%;
   }
@@ -726,5 +728,64 @@ footer .contactInfoHolder .contactInfo a {
   .descriptionBody .descriptionContent .descriptionBlock h2, .descriptionBody .descriptionContent .descriptionBlock p:nth-child(2), .descriptionBody .descriptionContent .descriptionBlock p:nth-child(3), .descriptionBody .descriptionContent .descriptionBlock p:nth-child(4) {
     margin-left: 0;
   }
+}
+
+_::-webkit-full-page-media .landingPage .landingImage, _:future .landingPage .landingImage, :root .safari_only .landingPage .landingImage {
+  background-attachment: local;
+}
+
+_::-webkit-full-page-media .landingPage nav li a, _:future .landingPage nav li a, :root .safari_only .landingPage nav li a {
+  text-shadow: 1px 0 black, 0 .6px black, .6px 0 black, 0 -.6px black;
+}
+
+_::-webkit-full-page-media .descriptionBody, _:future .descriptionBody, :root .safari_only .descriptionBody {
+  min-height: 80vh;
+}
+
+_::-webkit-full-page-media .descriptionBody .descriptionContent .descriptionBlock img, _:future .descriptionBody .descriptionContent .descriptionBlock img, :root .safari_only .descriptionBody .descriptionContent .descriptionBlock img {
+  background-attachment: local;
+}
+
+_::-webkit-full-page-media .contactBackground, _:future .contactBackground, :root .safari_only .contactBackground {
+  max-height: 100vh;
+  width: 100%;
+  margin: auto;
+  position: relative;
+  padding: 0 0 2em;
+}
+
+_::-webkit-full-page-media .contactBackground .contactForm, _:future .contactBackground .contactForm, :root .safari_only .contactBackground .contactForm {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  flex-wrap: nowrap;
+  width: 60%;
+  margin: auto;
+}
+
+_::-webkit-full-page-media .contactBackground .contactForm h2, _:future .contactBackground .contactForm h2, :root .safari_only .contactBackground .contactForm h2 {
+  width: auto;
+  font-size: 2em;
+  color: #999;
+}
+
+_::-webkit-full-page-media .contactBackground .contactForm label, _:future .contactBackground .contactForm label, :root .safari_only .contactBackground .contactForm label {
+  width: auto;
+  padding: 1em 0 1em 0;
+  margin: 0;
+}
+
+_::-webkit-full-page-media .contactBackground .contactForm #firstName, _::-webkit-full-page-media .contactBackground .contactForm #lastName, _::-webkit-full-page-media .contactBackground .contactForm #email, _::-webkit-full-page-media .contactBackground .contactForm #number, _::-webkit-full-page-media .contactBackground .contactForm #submit, _::-webkit-full-page-media .contactBackground .contactForm #message, _:future .contactBackground .contactForm #firstName, _:future .contactBackground .contactForm #lastName, _:future .contactBackground .contactForm #email, _:future .contactBackground .contactForm #number, _:future .contactBackground .contactForm #submit, _:future .contactBackground .contactForm #message, :root .safari_only .contactBackground .contactForm #firstName, :root .safari_only .contactBackground .contactForm #lastName, :root .safari_only .contactBackground .contactForm #email, :root .safari_only .contactBackground .contactForm #number, :root .safari_only .contactBackground .contactForm #submit, :root .safari_only .contactBackground .contactForm #message {
+  -webkit-box-flex: 1;
+          flex-grow: 1;
+  width: auto;
+  margin: 0;
+  padding: 1em;
+}
+
+_::-webkit-full-page-media .contactBackground .contactForm #message, _:future .contactBackground .contactForm #message, :root .safari_only .contactBackground .contactForm #message {
+  height: 10em;
 }
 /*# sourceMappingURL=styles.css.map */

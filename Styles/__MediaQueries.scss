@@ -274,8 +274,8 @@
     }
 }
 
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active), (-webkit-min-device-pixel-ratio:0) {
-    /* IE10+ and safari CSS styles go here */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active){
+    /* IE10+ CSS styles go here */
     .landingPage{
         .landingImage{
             background-attachment: local;
@@ -290,6 +290,7 @@
         }
     }
     .descriptionBody{
+        min-height: 80vh;
         .descriptionContent{
             .descriptionBlock{
                 img{
@@ -366,7 +367,7 @@
     }
 }
 
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active), (-webkit-min-device-pixel-ratio:0), (max-width: 1200px){
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active), (max-width: 1200px){
     .contactBackground{
         .contactForm{
             width: 100%;
@@ -381,6 +382,72 @@
                 h2, p:nth-child(2), p:nth-child(3), p:nth-child(4){
                     margin-left: 0
                 }
+            }
+        }
+    }
+}
+
+_::-webkit-full-page-media, _:future, :root .safari_only {
+    .landingPage{
+        .landingImage{
+            background-attachment: local;
+        }
+
+        nav {
+            li {
+                a{
+                    text-shadow: 1px 0 black, 0 .6px black, .6px 0 black, 0 -.6px black;
+                }
+            }
+        }
+    }
+    .descriptionBody{
+        min-height: 80vh;
+        .descriptionContent{
+            .descriptionBlock{
+                img{
+                    background-attachment: local;
+                }
+            }
+        }
+    }
+    
+    .contactBackground{
+        max-height: 100vh;
+        width: 100%;
+        margin: auto;
+        position: relative;
+        padding: 0 0 2em;
+    
+        .contactForm{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            width: 60%;
+            margin: auto;
+    
+            h2{
+                width: auto;
+                font-size: 2em;
+                color: #999;
+            }
+    
+            label{
+                width: auto;
+                padding: 1em 0 1em 0;
+                margin: 0;
+               
+            }
+    
+            #firstName, #lastName, #email, #number,#submit, #message{
+                flex-grow: 1;
+                width: auto;
+                margin: 0;
+                padding: 1em;
+            }
+
+            #message{
+                height: 10em;
             }
         }
     }
