@@ -386,7 +386,7 @@
     }
 }
 
-_::-webkit-full-page-media, _:future, :root .safari_only {
+@media not all and (min-resolution:.001dpcm) {
     .landingPage{
         .landingImage{
             background-attachment: local;
@@ -400,6 +400,7 @@ _::-webkit-full-page-media, _:future, :root .safari_only {
             }
         }
     }
+
     .descriptionBody{
         min-height: 80vh;
         .descriptionContent{
@@ -407,7 +408,7 @@ _::-webkit-full-page-media, _:future, :root .safari_only {
                 height: 100%;
                 margin: unset;
                 background: rgba(142, 111, 101, .95);
-                
+
                 img{
                     background-attachment: local;
                 }
