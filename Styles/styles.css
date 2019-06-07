@@ -464,7 +464,7 @@ footer .contactInfoHolder .contactInfo a {
   .descriptionBody .descriptionContent .descriptionBlock {
     height: 100%;
     margin: unset;
-    background: rgba(142, 111, 101, 0.95);
+    background-color: rgba(142, 111, 101, 0.95);
   }
   .descriptionBody .descriptionContent .descriptionBlock h2 {
     margin-left: unset;
