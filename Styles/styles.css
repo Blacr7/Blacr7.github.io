@@ -740,6 +740,9 @@ footer .contactInfoHolder .contactInfo a {
   .descriptionBody {
     min-height: 80vh;
   }
+  .descriptionBody .descriptionContent {
+    height: 100%;
+  }
   .descriptionBody .descriptionContent .descriptionBlock {
     height: 100%;
     margin: unset;
@@ -747,6 +750,7 @@ footer .contactInfoHolder .contactInfo a {
   }
   .descriptionBody .descriptionContent .descriptionBlock img {
     background-attachment: local;
+    background-position: bottom;
   }
   .contactBackground {
     max-height: 100vh;
