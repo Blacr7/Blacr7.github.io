@@ -386,8 +386,7 @@
     }
 }
 
-@supports (-webkit-text-size-adjust:none) and (not (-ms-ime-align:auto))
-and (not (-moz-appearance:none)){
+.yourClass:not(:root:root){ 
     .landingPage{
         .landingImage{
             background-attachment: local;
@@ -410,7 +409,7 @@ and (not (-moz-appearance:none)){
                 height: 100%;
                 margin: unset;
                 background: rgba(142, 111, 101, .95);
-
+                
                 img{
                     background-attachment: local;
                     background-position: bottom;
