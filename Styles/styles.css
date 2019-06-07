@@ -742,6 +742,12 @@ _::-webkit-full-page-media .descriptionBody, _:future .descriptionBody, :root .s
   min-height: 80vh;
 }
 
+_::-webkit-full-page-media .descriptionBody .descriptionContent .descriptionBlock, _:future .descriptionBody .descriptionContent .descriptionBlock, :root .safari_only .descriptionBody .descriptionContent .descriptionBlock {
+  height: 100%;
+  margin: unset;
+  background: rgba(142, 111, 101, 0.95);
+}
+
 _::-webkit-full-page-media .descriptionBody .descriptionContent .descriptionBlock img, _:future .descriptionBody .descriptionContent .descriptionBlock img, :root .safari_only .descriptionBody .descriptionContent .descriptionBlock img {
   background-attachment: local;
 }
