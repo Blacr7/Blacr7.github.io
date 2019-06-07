@@ -275,7 +275,7 @@
 }
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active), (-webkit-min-device-pixel-ratio:0) {
-    /* IE10+ CSS styles go here */
+    /* IE10+ and safari CSS styles go here */
     .landingPage{
         .landingImage{
             background-attachment: local;
@@ -289,6 +289,10 @@
             }
         }
     }
+    .descriptionBody{
+
+    }
+
     .contactBackground{
         max-height: 100vh;
         width: 100%;
