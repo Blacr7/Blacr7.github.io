@@ -408,12 +408,14 @@
             .descriptionBlock{
                 height: 100%;
                 margin: unset;
-                background: unset;
-                background-color: !important rgba(142, 111, 101, .95);
 
                 img{
                     background-attachment: local;
                     background-position: bottom;
+                }
+
+                p{
+                    color: $secondaryColor;
                 }
             }
         }
