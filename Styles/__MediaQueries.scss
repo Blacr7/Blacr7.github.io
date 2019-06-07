@@ -290,7 +290,13 @@
         }
     }
     .descriptionBody{
-
+        .descriptionContent{
+            .descriptionBlock{
+                img{
+                    background-attachment: local;
+                }
+            }
+        }
     }
 
     .contactBackground{
@@ -360,7 +366,7 @@
     }
 }
 
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active), (max-width: 1200px){
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active), (-webkit-min-device-pixel-ratio:0), (max-width: 1200px){
     .contactBackground{
         .contactForm{
             width: 100%;
