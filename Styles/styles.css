@@ -746,7 +746,7 @@ footer .contactInfoHolder .contactInfo a {
   .descriptionBody .descriptionContent .descriptionBlock {
     height: 100%;
     margin: unset;
-    background: rgba(142, 111, 101, 0.95);
+    background: !important rgba(142, 111, 101, 0.95);
   }
   .descriptionBody .descriptionContent .descriptionBlock img {
     background-attachment: local;
