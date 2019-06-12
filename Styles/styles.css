@@ -738,13 +738,10 @@ footer .contactInfoHolder .contactInfo a {
   }
   .descriptionBody {
     min-height: 80vh;
-  }
-  .descriptionBody .descriptionContent {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    overflow: auto;
   }
   .descriptionBody .descriptionContent .descriptionBlock {
+    height: 100%;
     margin: unset;
   }
   .descriptionBody .descriptionContent .descriptionBlock img {

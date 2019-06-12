@@ -403,9 +403,11 @@
 
     .descriptionBody{
         min-height: 80vh;
+        overflow: auto;
+        
         .descriptionContent{
-            display: flex;
             .descriptionBlock{
+                height: 100%;
                 margin: unset;
 
                 img{
