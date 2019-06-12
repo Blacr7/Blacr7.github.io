@@ -268,7 +268,6 @@ body {
 
 .descriptionBody {
   background: #FBFBFB;
-  overflow: auto;
 }
 
 .descriptionBody .descriptionContent {
@@ -741,15 +740,17 @@ footer .contactInfoHolder .contactInfo a {
     min-height: 80vh;
   }
   .descriptionBody .descriptionContent {
-    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   .descriptionBody .descriptionContent .descriptionBlock {
-    height: 100%;
     margin: unset;
   }
   .descriptionBody .descriptionContent .descriptionBlock img {
     background-attachment: local;
     background-position: bottom;
+    background-size: cover;
   }
   .descriptionBody .descriptionContent .descriptionBlock p {
     color: #000000;

@@ -404,14 +404,14 @@
     .descriptionBody{
         min-height: 80vh;
         .descriptionContent{
-            height: 100%;
+            display: flex;
             .descriptionBlock{
-                height: 100%;
                 margin: unset;
 
                 img{
                     background-attachment: local;
                     background-position: bottom;
+                    background-size: cover;
                 }
 
                 p{
